@@ -1,9 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #fff;
   margin: 0;
-  padding-top: 95px;
+  padding-top: 10%;
   /* 65px header height + 30px padding */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
 }
 
 header {
@@ -44,7 +62,7 @@ header {
 }
 
 .nav-right {
-  margin-right: 50%;
+  margin-right: 20%;
   /* This shifts the entire nav bar left */
 }
 
@@ -107,63 +125,71 @@ nav a:hover {
   font-size: 25px;
 }
 
-#about {
-  background-color: #f7f8fa;
-  padding: 40px;
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border: 2px solid #007BFF;
+  /* Blue border */
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  /* Blue glow shadow */
   border-radius: 10px;
+
+}
+
+h1 {
+  color: #036fe2;
   text-align: center;
-  color: #333;
-}
-
-.about-logo {
-  width: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.about-title {
-  color: #036fe2;
-  font-size: 36px;
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 20px;
-}
-
-.about-paragraph {
-  font-size: 18px;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto 20px;
-}
-
-.about-subheading {
-  color: #036fe2;
-  font-size: 24px;
+  font-size: 25px;
   margin-top: 30px;
+  margin-bottom: 50px;
 }
 
-.about-list {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 20px auto;
-  font-size: 18px;
-  text-align: left;
-  margin-left: 40%;
-}
-
-.about-list i {
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   color: #036fe2;
-  /* Green check color */
-  margin-right: 10px;
+  font-size: 20px;
 }
 
+p {
+  line-height: 1.5;
+  font-size: 16px;
+
+}
+
+ul {
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.contact {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+a {
+  color: #036fe2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer fix */
 footer {
-  background-color: #036fe2;
-  padding: 10px;
+  width: 100%;
   margin: 0;
+  margin-top: 3%;
+  padding: 20px 0;
+  background-color: #036fe2;
   text-align: center;
-  margin-top: 50px;
   color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
 }
 
 footer a {
@@ -173,6 +199,7 @@ footer a {
 
 /* Responsive for tablets and below */
 @media (max-width: 992px) {
+
   .header-container {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -181,7 +208,7 @@ footer a {
 
   .logo-link {
     margin-left: 0%;
-    margin-right: 50%;
+    margin-right: 40%;
     /* ✅ Pushes it to the left */
   }
 
@@ -192,8 +219,13 @@ footer a {
     justify-content: flex-start;
     gap: 10px;
 
+
   }
 
+  .logo-left img {
+    width: 50px;
+    height: 50px;
+  }
 
   .menu-icon {
     display: block;
@@ -253,37 +285,48 @@ footer a {
     font-size: 21px;
   }
 
-  .about-title {
-    font-size: 28px;
-  }
-
-  .about-subheading {
-    font-size: 20px;
-  }
-
-  .about-paragraph {
-
-    font-size: 16px;
+  h1 {
+    color: #036fe2;
     text-align: center;
-    margin-left: 0;
-    padding: 0 10px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 
-  .about-list {
-    font-size: 16px;
-    text-align: left;
-    margin-left: 0;
-    padding: 0 10px;
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #036fe2;
+    font-size: 15px;
   }
 
-  .about-logo {
-    width: 150px;
+  p {
+    line-height: 1.5;
+    font-size: 13px;
+
   }
 
+  ul {
+    font-size: 13px;
+  }
+
+  .contact {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  a {
+    color: #036fe2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 
   footer {
     background-color: #036fe2;
-    padding: 5px;
+    padding: 10px;
     margin: 0;
     text-align: center;
     margin-top: 20px;
@@ -297,7 +340,15 @@ footer a {
   .logo-left img {
     width: 50px;
     height: 50px;
+    justify-items: flex-start;
+  }
 
+  .container {
+    padding: 15px;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   .site-name .blink {

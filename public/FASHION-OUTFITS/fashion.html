@@ -1,142 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fashion Outfits Services - Blink Bowl</title>
-    <link rel="stylesheet" href="../CAR-WASHING/wash.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Outfits Services - Blink Bowl</title>
+  <link rel="stylesheet" href="../CAR-WASHING/wash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
- <header>
-  <div class="header-container">
-    
-    <!-- Menu icon (left on mobile) -->
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <header>
+    <div class="header-container">
 
-    <!-- Logo and site name (right on mobile) -->
-   <a href="../index.html" class="logo-link">
-  <div class="logo-left">
-    <img src="https://assets.onecompiler.app/42ucesb3u/43mzujew2/WhatsApp%20Image%202025-06-17%20at%203.56.03%20PM.jpeg" alt="Logo">
-    <span class="site-name">
-      <span class="blink">Blink</span>
-      <span class="bowl"> Bowl</span>
-    </span>
+      <!-- Menu icon (left on mobile) -->
+      <div class="menu-icon" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+      <!-- Logo and site name (right on mobile) -->
+      <a href="../index.html" class="logo-link">
+        <div class="logo-left">
+          <img
+            src="https://assets.onecompiler.app/42ucesb3u/43mzujew2/WhatsApp%20Image%202025-06-17%20at%203.56.03%20PM.jpeg"
+            alt="Logo">
+          <span class="site-name">
+            <span class="blink">Blink</span>
+            <span class="bowl"> Bowl</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="nav-links" id="mobileMenu">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./OUR-SERVICES/services.html">Services</a>
+        <a href="FRANCHIES/Franchise.html">Franchise</a>
+        <a href="./CONTACT US/contact.html">Contact</a>
+        <a href="./ABOUT US/about.html">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section id="Fashion Outfits">
+    <div class="container">
+
+      <h2 class="service-heading">Fashion Outfits</h2>
+      <p class="service-content">At Blink Bowl Fashion, we bring you the latest in style, comfort, and confidence. Our
+        Fashion Outfits collection is carefully curated to suit every personality, occasion, and season—making sure you
+        stand out wherever you go.</p>
+
+      <!-- Main Image Carousel -->
+      <div class="carousel">
+        <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(12).jpeg" class="active" />
+        <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(14).jpeg" />
+        <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(13).jpeg" />
+      </div>
+
+      <!-- Trendy Collections -->
+      <div class="service">
+        <div class="service-text">
+          <h3>Trendy Collections</h3>
+          <p>Explore seasonal collections that feature the latest fashion trends. From casual streetwear to elegant
+            evening styles, we’ve got the right look for every mood and moment.</p>
+        </div>
+      </div>
+
+      <!--All Sizes & Fits -->
+      <div class="service">
+        <div class="service-text">
+          <h3>All Sizes & Fits</h3>
+          <p>We celebrate every body type. Our inclusive size range and thoughtfully designed fits ensure that everyone
+            finds something that looks great and feels even better.</p>
+        </div>
+      </div>
+
+      <!--High-Quality Materials -->
+      <div class="service">
+        <div class="service-text">
+          <h3>High-Quality Materials</h3>
+          <p>Our outfits are made with premium fabrics that combine durability with comfort. Enjoy styles that don’t
+            just look good but also last longer and feel great to wear.</p>
+        </div>
+      </div>
+
+      <!--Style for Every Occasion -->
+      <div class="service">
+        <div class="service-text">
+          <h3>Style for Every Occasion</h3>
+          <p>Whether it’s a festive celebration, office day, or weekend getaway—Blink Bowl Fashion offers outfit options
+            that match every event on your calendar.</p>
+        </div>
+      </div>
+
+      <!--Affordable & Fashion-Forward -->
+      <div class="service">
+        <div class="service-text">
+          <h3>Affordable & Fashion-Forward</h3>
+          <p>We believe in making fashion accessible. Enjoy high-end looks without the high-end price tags, with fresh
+            arrivals and exclusive deals you won’t want to miss.</p>
+        </div>
+      </div>
+
+      <!--Final Call to Action -->
+      <div class="service">
+        <div class="service-text">
+          <p>Shop your style today with Blink Bowl Fashion. Discover clothing that defines your personality, boosts your
+            confidence, and brings out the best in you.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="form-group">
+    <a href="carwashapply.html" class="apply-btn">Book Your Fashion Outfits</a>
   </div>
-</a>
+  <div id="popupForm" class="popup-overlay">
+    <div class="popup-content">
 
-    <!-- Navigation links -->
-    <nav class="nav-links" id="mobileMenu">
-      <a href="../index.html">Home</a>
-      <a href="../OUR-SERVICES/services.html">Services</a>
-      <a href="../ABOUT US/about.html">About</a>
-      <a href="../CONTACT US/contact.html">Contact</a>
-    </nav>
-    
+      <!-- Heading Across Top -->
+      <div class="popup-title">
+        <h2>Book Your Fashion Outfits</h2>
+      </div>
+
+      <!-- Flex Row: Image + Form -->
+      <div class="popup-body">
+        <div class="popup-left">
+          <img src="outfit.png" alt="Car Wash Image">
+        </div>
+
+        <div class="popup-right">
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <input type="text" placeholder="Outfit Type" required>
+            <textarea placeholder="Address / Special Request" rows="4"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
-</header>
-
-<section id="Fashion Outfits">
-  <div class="container">
-    
-    <h2 class="service-heading">Fashion Outfits</h2> 
-    <p class="service-content">At Blink Bowl Fashion, we bring you the latest in style, comfort, and confidence. Our Fashion Outfits collection is carefully curated to suit every personality, occasion, and season—making sure you stand out wherever you go.</p>
-    
-    <!-- Main Image Carousel -->
-    <div class="carousel">
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(12).jpeg" class="active" />
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(14).jpeg" />
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/download%20(13).jpeg" />
-    </div>
-
-    <!-- Trendy Collections -->
-    <div class="service">
-      <div class="service-text">
-        <h3>Trendy Collections</h3>
-        <p>Explore seasonal collections that feature the latest fashion trends. From casual streetwear to elegant evening styles, we’ve got the right look for every mood and moment.</p>
-      </div>
-    </div>
-
-    <!--All Sizes & Fits -->
-    <div class="service">
-      <div class="service-text">
-        <h3>All Sizes & Fits</h3>
-        <p>We celebrate every body type. Our inclusive size range and thoughtfully designed fits ensure that everyone finds something that looks great and feels even better.</p>
-      </div>
-    </div>
-
-    <!--High-Quality Materials -->
-    <div class="service">
-      <div class="service-text">
-        <h3>High-Quality Materials</h3>
-        <p>Our outfits are made with premium fabrics that combine durability with comfort. Enjoy styles that don’t just look good but also last longer and feel great to wear.</p>
-      </div>
-    </div>
-
-    <!--Style for Every Occasion -->
-    <div class="service">
-      <div class="service-text">
-        <h3>Style for Every Occasion</h3>
-        <p>Whether it’s a festive celebration, office day, or weekend getaway—Blink Bowl Fashion offers outfit options that match every event on your calendar.</p>
-      </div>
-    </div>
-
-    <!--Affordable & Fashion-Forward -->
-    <div class="service">
-      <div class="service-text">
-        <h3>Affordable & Fashion-Forward</h3>
-        <p>We believe in making fashion accessible. Enjoy high-end looks without the high-end price tags, with fresh arrivals and exclusive deals you won’t want to miss.</p>
-      </div>
-    </div>
-
-    <!--Final Call to Action -->
-    <div class="service">
-      <div class="service-text">
-        <p>Shop your style today with Blink Bowl Fashion. Discover clothing that defines your personality, boosts your confidence, and brings out the best in you.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <div class="form-group">
-        <a href="carwashapply.html" class="apply-btn">Book Your Fashion Outfits</a>
-    </div>
-   <div id="popupForm" class="popup-overlay">
-  <div class="popup-content">
-    
-    <!-- Heading Across Top -->
-    <div class="popup-title">
-      <h2>Book Your Fashion Outfits</h2>
-    </div>
-
-    <!-- Flex Row: Image + Form -->
-    <div class="popup-body">
-      <div class="popup-left">
-        <img src="outfit.png" alt="Car Wash Image">
-      </div>
-
-      <div class="popup-right">
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Mobile Number" required>
-          <input type="text" placeholder="Outfit Type" required>
-          <textarea placeholder="Address / Special Request" rows="4"></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 
-    <footer>
-        <p>&copy; 2025 Blink Bowl. All Rights Reserved.</p>
-        <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank">vspaze technologies</a></p>
-    </footer>
-    <script src="../CAR-WASHING/wash.js"></script>
+  <footer>
+    <p>&copy; 2025 Blink Bowl. All Rights Reserved.</p>
+    <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA=="
+        target="_blank">vspaze technologies</a></p>
+  </footer>
+  <script src="../CAR-WASHING/wash.js"></script>
 </body>
+
 </html>

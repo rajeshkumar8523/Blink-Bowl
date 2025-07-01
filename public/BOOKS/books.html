@@ -1,142 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books & Stationery Services - Blink Bowl</title>
-    <link rel="stylesheet" href="../CAR-WASHING/wash.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books & Stationery Services - Blink Bowl</title>
+  <link rel="stylesheet" href="../CAR-WASHING/wash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
- <header>
-  <div class="header-container">
-    
-    <!-- Menu icon (left on mobile) -->
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <header>
+    <div class="header-container">
 
-    <!-- Logo and site name (right on mobile) -->
-   <a href="../index.html" class="logo-link">
-  <div class="logo-left">
-    <img src="https://assets.onecompiler.app/42ucesb3u/43mzujew2/WhatsApp%20Image%202025-06-17%20at%203.56.03%20PM.jpeg" alt="Logo">
-    <span class="site-name">
-      <span class="blink">Blink</span>
-      <span class="bowl"> Bowl</span>
-    </span>
+      <!-- Menu icon (left on mobile) -->
+      <div class="menu-icon" id="menuToggle" onclick="toggleMenu()">☰</div>
+
+      <!-- Logo and site name (right on mobile) -->
+      <a href="../index.html" class="logo-link">
+        <div class="logo-left">
+          <img
+            src="https://assets.onecompiler.app/42ucesb3u/43mzujew2/WhatsApp%20Image%202025-06-17%20at%203.56.03%20PM.jpeg"
+            alt="Logo">
+          <span class="site-name">
+            <span class="blink">Blink</span>
+            <span class="bowl"> Bowl</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="nav-links" id="mobileMenu">
+        <a href="../index.html">Home</a>
+        <a href="../OUR-SERVICES/services.html" class="active">Services</a>
+        <a href="../FRANCHIES/Franchise.html">Franchise</a>
+        <a href="../CONTACT US/contact.html">Contact</a>
+        <a href="../ABOUT US/about.html">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <section id="Books & Stationery">
+    <div class="container">
+
+      <h2 class="service-heading">Books & Stationery</h2>
+      <p class="service-content">At Blink Bowl, we offer a comprehensive collection of books and stationery to meet all
+        your academic, professional, and personal needs. Whether you're a student, an office-goer, or a stationery
+        enthusiast, our quality products and affordable prices make us your go-to destination.</p>
+
+      <!-- Main Image Carousel -->
+      <div class="carousel">
+        <img
+          src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/Como%20organizar%20livros%20de%20forma%20criativa_%20Segredos%20surpreendentes%20para%20otimizar%20espa%C3%A7o%20e%20encontrar___.jpeg"
+          class="active" />
+        <img
+          src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/School%20supplies%20on%20white%20desk_%20Kids%20creativity%20flat%20lay.jpeg" />
+        <img
+          src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/Premium%20Photo%20_%20Stack%20of%20books%20in%20a%20library%20World%20Book%20Day.jpeg" />
+      </div>
+
+      <!-- Wide Range of Books -->
+      <div class="service">
+        <div class="service-text">
+          <h3>Wide Range of Books</h3>
+          <p>From school and college textbooks to competitive exam guides, novels, and children's books – we stock a
+            wide variety to suit every reader’s need and interest.</p>
+        </div>
+      </div>
+
+      <!--Stationery for Every Purpose-->
+      <div class="service">
+        <div class="service-text">
+          <h3>Stationery for Every Purpose</h3>
+          <p>Find premium pens, notebooks, files, art supplies, and other stationery essentials – perfect for students,
+            artists, and professionals alike.</p>
+        </div>
+      </div>
+
+      <!--Academic & Office Supplies-->
+      <div class="service">
+        <div class="service-text">
+          <h3>Academic & Office Supplies</h3>
+          <p>Get all your educational and office supply needs in one place. From practical classroom kits to executive
+            office materials, we’ve got it all covered.</p>
+        </div>
+      </div>
+
+      <!--Affordable Pricing & Offers-->
+      <div class="service">
+        <div class="service-text">
+          <h3>Affordable Pricing & Offers</h3>
+          <p>Enjoy budget-friendly prices, bundle deals, and seasonal discounts on all books and stationery items –
+            without compromising on quality.</p>
+        </div>
+      </div>
+
+      <!--Custom Orders & Bulk Supply-->
+      <div class="service">
+        <div class="service-text">
+          <h3>Custom Orders & Bulk Supply</h3>
+          <p>Need bulk supplies for schools, colleges, or offices? We offer customized solutions and bulk delivery
+            services to meet your organizational needs.</p>
+        </div>
+      </div>
+
+      <!--Final Call to Action-->
+      <div class="service">
+        <div class="service-text">
+          <p>Choose Blink Bowl for trusted, convenient, and complete Books & Stationery solutions. Visit us today or
+            order online to experience reliable service and top-quality supplies!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <div class="form-group">
+    <a href="carwashapply.html" class="apply-btn">Book Your Books</a>
   </div>
-</a>
+  <div id="popupForm" class="popup-overlay">
+    <div class="popup-content">
 
-    <!-- Navigation links -->
-    <nav class="nav-links" id="mobileMenu">
-      <a href="../index.html">Home</a>
-      <a href="../OUR-SERVICES/services.html">Services</a>
-      <a href="../ABOUT US/about.html">About</a>
-      <a href="../CONTACT US/contact.html">Contact</a>
-    </nav>
-    
+      <!-- Heading Across Top -->
+      <div class="popup-title">
+        <h2>Book Your Books</h2>
+      </div>
+
+      <!-- Flex Row: Image + Form -->
+      <div class="popup-body">
+        <div class="popup-left">
+          <img src="books.png" alt="Car Wash Image">
+        </div>
+
+        <div class="popup-right">
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="tel" placeholder="Mobile Number" required>
+            <input type="text" placeholder="Books Type" required>
+            <textarea placeholder="Address / Special Request" rows="4"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
   </div>
-</header>
-
-<section id="Books & Stationery">
-  <div class="container">
-
-    <h2 class="service-heading">Books & Stationery</h2>
-    <p class="service-content">At Blink Bowl, we offer a comprehensive collection of books and stationery to meet all your academic, professional, and personal needs. Whether you're a student, an office-goer, or a stationery enthusiast, our quality products and affordable prices make us your go-to destination.</p>
-
-    <!-- Main Image Carousel -->
-    <div class="carousel">
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/Como%20organizar%20livros%20de%20forma%20criativa_%20Segredos%20surpreendentes%20para%20otimizar%20espa%C3%A7o%20e%20encontrar___.jpeg" class="active" />
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/School%20supplies%20on%20white%20desk_%20Kids%20creativity%20flat%20lay.jpeg" />
-      <img src="https://uploads.onecompiler.io/42ucesb3u/43nevk489/Premium%20Photo%20_%20Stack%20of%20books%20in%20a%20library%20World%20Book%20Day.jpeg" />
-    </div>
-
-    <!-- Wide Range of Books -->
-    <div class="service">
-      <div class="service-text">
-        <h3>Wide Range of Books</h3>
-        <p>From school and college textbooks to competitive exam guides, novels, and children's books – we stock a wide variety to suit every reader’s need and interest.</p>
-      </div>
-    </div>
-
-    <!--Stationery for Every Purpose-->
-    <div class="service">
-      <div class="service-text">
-        <h3>Stationery for Every Purpose</h3>
-        <p>Find premium pens, notebooks, files, art supplies, and other stationery essentials – perfect for students, artists, and professionals alike.</p>
-      </div>
-    </div>
-
-    <!--Academic & Office Supplies-->
-    <div class="service">
-      <div class="service-text">
-        <h3>Academic & Office Supplies</h3>
-        <p>Get all your educational and office supply needs in one place. From practical classroom kits to executive office materials, we’ve got it all covered.</p>
-      </div>
-    </div>
-
-    <!--Affordable Pricing & Offers-->
-    <div class="service">
-      <div class="service-text">
-        <h3>Affordable Pricing & Offers</h3>
-        <p>Enjoy budget-friendly prices, bundle deals, and seasonal discounts on all books and stationery items – without compromising on quality.</p>
-      </div>
-    </div>
-
-    <!--Custom Orders & Bulk Supply-->
-    <div class="service">
-      <div class="service-text">
-        <h3>Custom Orders & Bulk Supply</h3>
-        <p>Need bulk supplies for schools, colleges, or offices? We offer customized solutions and bulk delivery services to meet your organizational needs.</p>
-      </div>
-    </div>
-
-    <!--Final Call to Action-->
-    <div class="service">
-      <div class="service-text">
-        <p>Choose Blink Bowl for trusted, convenient, and complete Books & Stationery solutions. Visit us today or order online to experience reliable service and top-quality supplies!</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <div class="form-group">
-        <a href="carwashapply.html" class="apply-btn">Book Your Books</a>
-    </div>
-   <div id="popupForm" class="popup-overlay">
-  <div class="popup-content">
-    
-    <!-- Heading Across Top -->
-    <div class="popup-title">
-      <h2>Book Your Books</h2>
-    </div>
-
-    <!-- Flex Row: Image + Form -->
-    <div class="popup-body">
-      <div class="popup-left">
-        <img src="books.png" alt="Car Wash Image">
-      </div>
-
-      <div class="popup-right">
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="tel" placeholder="Mobile Number" required>
-          <input type="text" placeholder="Books Type" required>
-          <textarea placeholder="Address / Special Request" rows="4"></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-
-  </div>
-</div>
 
 
 
-    <footer>
-        <p>&copy; 2025 Blink Bowl. All Rights Reserved.</p>
-        <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA==" target="_blank">vspaze technologies</a></p>
-    </footer>
-    <script src="../CAR-WASHING/wash.js"></script>
+  <footer>
+    <p>&copy; 2025 Blink Bowl. All Rights Reserved.</p>
+    <p>Powered by <a href="https://www.instagram.com/vspaze_technologies?igsh=MWR3cnBpOGdpYnRyeA=="
+        target="_blank">vspaze technologies</a></p>
+  </footer>
+  <script src="../CAR-WASHING/wash.js"></script>
 </body>
+
 </html>
