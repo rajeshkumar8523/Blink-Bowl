@@ -4,18 +4,28 @@ const toggleBtn = document.getElementById("menuToggle");
 function toggleMenu() {
   menu.classList.toggle("show");
 
-  // Add global click listener when menu is shown
   if (menu.classList.contains("show")) {
+    toggleBtn.textContent = "✖";
     document.addEventListener("click", handleOutsideClick);
   } else {
+    toggleBtn.textContent = "☰";
     document.removeEventListener("click", handleOutsideClick);
   }
 }
 
 function handleOutsideClick(event) {
-  // If click is outside both menu and toggle button
   if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
     menu.classList.remove("show");
+    toggleBtn.textContent = "☰";
     document.removeEventListener("click", handleOutsideClick);
   }
 }
+
+
+// Optional: Reset on resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    menu.classList.remove("show");
+    toggleBtn.textContent = "☰";
+  }
+});

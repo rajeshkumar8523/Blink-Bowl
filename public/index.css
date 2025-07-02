@@ -16,7 +16,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
   margin: 0;
-  padding-top: 95px;
+  padding-top: 90px;
   /* 65px header height + 30px padding */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -44,7 +44,6 @@ header {
   padding: 0 20px;
   height: 65px;
 }
-
 /* Basic styles */
 .menu-icon {
   display: none;
@@ -130,7 +129,7 @@ nav a:hover {
   max-width: 700px;
   margin: 0 auto;
   padding: 15px;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 0%;
 }
 
@@ -189,6 +188,7 @@ nav a:hover {
   position: relative;
   width: 100%;
   height: 100%;
+  animation: fadeSlideUp 0.6s ease-out forwards;
 }
 
 .card-wrapper::before {
@@ -279,6 +279,7 @@ nav a:hover {
   font-size: 26px;
   color: #036fe2;
   margin-bottom: 12px;
+  animation: pulse 1.5s infinite;
 }
 
 .step {
@@ -294,6 +295,7 @@ nav a:hover {
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 2;
+   
 }
 
 
@@ -336,21 +338,30 @@ nav a:hover {
 }
 
 
-
-
-
-
+ 
 .services-section {
   text-align: center;
   padding: 50px 20px;
   margin-top: 0px;
 }
-
 .services-section h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-
+  margin-bottom: 20px;
 }
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: flyIn 0.5s forwards;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 5;
+    transform: translateY(0);
+  }
+}
+
+
 
 .services-section p {
   color: #444;
@@ -375,6 +386,7 @@ nav a:hover {
   position: relative;
   padding-bottom: 20px;
   height: 450px;
+  
 }
 
 .service-card:hover {
@@ -424,6 +436,7 @@ nav a:hover {
   font-size: 22px;
   z-index: 2;
   transition: all 0.3s ease;
+   
 }
 
 .service-card:hover .icon-circle {
@@ -459,6 +472,7 @@ nav a:hover {
   color: #007BFF;
   font-weight: bold;
   text-decoration: none;
+  border: 1px solid #007BFF;
   padding: 8px 16px;
   border-radius: 5px;
   margin-top: 10px;
@@ -473,6 +487,7 @@ nav a:hover {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+   
 }
 
 
@@ -503,12 +518,23 @@ nav a:hover {
 
   text-align: center;
 }
-
 .essitinal-heading {
-  font-size: 30px;
-  color: #000;
   margin-bottom: 15px;
 }
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: flyIn 0.5s forwards;
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 .essitinal-description {
   font-size: 16px;
@@ -516,6 +542,8 @@ nav a:hover {
   max-width: 550px;
   margin: 0 auto 40px;
   line-height: 1.6;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .essitinal-grid {
@@ -525,17 +553,23 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
+/* Add animation to the card */
 .essitinal-card {
   flex: 1;
   min-width: 250px;
   max-width: 300px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.6s ease-out forwards;
 }
 
+/* Icon link style */
 .essitinal-icon a {
   text-decoration: none;
   color: #ffffff;
 }
 
+/* Icon base style */
 .essitinal-icon {
   background-color: #036fe2;
   width: 90px;
@@ -549,11 +583,55 @@ nav a:hover {
   transition: 0.3s ease;
 }
 
+/* Hover effect */
 .essitinal-icon:hover {
   background-color: #047dff;
-
   transform: scale(1.07);
 }
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.essitinal-icon:hover i {
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.essitinal-icon i {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 .essitinal-title {
   font-size: 18px;
@@ -637,10 +715,11 @@ footer a {
     top: 79px;
     left: 42%;
     width: 60%;
-    background-color: #036fe2;
+    background-color: #75a7dd;
     padding: 5px 5px 25px 2px;
     /* Increased bottom padding */
     z-index: 1001;
+    border-radius: 0 0 20px 20px;
     align-items: center;
     gap: 4px;
   }
@@ -688,7 +767,9 @@ footer a {
     grid-template-columns: repeat(1, 1fr);
     max-width: 600px;
   }
-
+.why-choose-section{
+  padding: 30px 10px;
+}
   .welcome-section h1 {
     font-size: 22px;
     margin-top: 30px;
@@ -702,7 +783,12 @@ footer a {
     margin-left: 3%;
 
   }
-
+.services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+     margin: 0 auto;
+  }
   .services-section {
     text-align: center;
     padding: 25px 10px;
@@ -733,7 +819,7 @@ footer a {
     padding-bottom: 20px;
     height: 330px;
     width: 300px;
-    margin-left: 15%;
+    margin: 0 auto;
   }
 
   .carousel {
@@ -800,7 +886,7 @@ footer a {
     padding: 10px;
     margin: 0;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 8px;
     font-size: 13px;
     color: white;
   }
@@ -834,7 +920,7 @@ footer a {
     grid-template-columns: 1fr;
     gap: 20px;
     margin: 0 auto;
-    margin-left: 5%;
+     
   }
 
   .service-card {
@@ -842,6 +928,7 @@ footer a {
     max-width: 300px;
     height: auto;
     margin: 0 auto;
+     
   }
 
   .service-card p {
@@ -860,13 +947,24 @@ footer a {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
-    margin-top: 0%;
+    padding: 0 10px; /* Optional small padding around */
+    margin-top: 0;
   }
 
   .card-wrapper {
     width: 100%;
     max-width: 280px;
-    margin: 0 auto;
+  }
+
+  /* Zig-zag effect: alternate margin-left/right */
+  .card-wrapper:nth-child(odd) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .card-wrapper:nth-child(even) {
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .step {
@@ -880,24 +978,6 @@ footer a {
     margin-top: 15px;
   }
 
-  /* Alternate margin-left or margin-right for the staggered effect */
-  .card-wrapper:nth-child(1) {
-    margin-left: 5px;
-  }
-
-  .card-wrapper:nth-child(2) {
-    margin-left: 85px;
-  }
-
-  .card-wrapper:nth-child(3) {
-    margin-left: 5px;
-  }
-
-  .card-wrapper:nth-child(4) {
-    margin-left: 85px;
-  }
-
-  /* Optional: adjust background shadows for smaller screens */
   .top-left .info-card,
   .top-right .info-card,
   .bottom-left .info-card,
@@ -908,11 +988,8 @@ footer a {
   .card-wrapper::before {
     top: 17px;
     left: 17px;
-    right: auto;
-    bottom: auto;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
     font-size: 14px;
-
   }
 }

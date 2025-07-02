@@ -18,18 +18,55 @@ const toggleBtn = document.getElementById("menuToggle");
 function toggleMenu() {
   menu.classList.toggle("show");
 
-  // Add global click listener when menu is shown
   if (menu.classList.contains("show")) {
+    toggleBtn.textContent = "✖";
     document.addEventListener("click", handleOutsideClick);
   } else {
+    toggleBtn.textContent = "☰";
     document.removeEventListener("click", handleOutsideClick);
   }
 }
 
 function handleOutsideClick(event) {
-  // If click is outside both menu and toggle button
   if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
     menu.classList.remove("show");
+    toggleBtn.textContent = "☰";
     document.removeEventListener("click", handleOutsideClick);
   }
 }
+
+
+// Optional: Reset on resize
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    menu.classList.remove("show");
+    toggleBtn.textContent = "☰";
+  }
+});
+
+
+
+
+  // Reusable function to animate text letter by letter
+  function animateHeadingText(text, elementId) {
+    const heading = document.getElementById(elementId);
+    heading.innerHTML = "";
+
+    [...text].forEach((char, i) => {
+      const span = document.createElement("span");
+
+      if (char === " ") {
+        span.innerHTML = "&nbsp;";
+      } else {
+        span.textContent = char;
+        span.style.animationDelay = `${i * 0.06}s`;
+      }
+
+      span.classList.add("letter");
+      heading.appendChild(span);
+    });
+  }
+
+  // Call the function for both headings
+  animateHeadingText("Our Services", "animatedHeading");
+  animateHeadingText("Essentials", "essitinalHeading");

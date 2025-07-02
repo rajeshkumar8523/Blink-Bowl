@@ -119,7 +119,19 @@ nav a:hover {
   margin-left: 20%;
   margin-bottom: 10px;
 }
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: flyIn 0.5s forwards;
+}
 
+@keyframes flyIn {
+  to {
+    opacity: 5;
+    transform: translateY(0);
+  }
+}
 .services-section p {
   color: #666;
   text-align: start;
@@ -228,6 +240,7 @@ nav a:hover {
   display: inline-block;
   background-color: #fff;
   color: #007BFF;
+   border: 1px solid #007BFF;
   font-weight: bold;
   text-decoration: none;
   padding: 8px 16px;
@@ -537,9 +550,10 @@ footer a {
     flex-direction: column;
     position: absolute;
     top: 79px;
-    left: 42%;
+    left: 41%;
     width: 60%;
-    background-color: #036fe2;
+     background-color: #75a7dd;
+    border-radius: 0 0 20px 20px;
     padding: 5px 5px 25px 2px;
     /* Increased bottom padding */
     z-index: 1001;
@@ -555,7 +569,7 @@ footer a {
     font-size: 14px;
     padding: 12px 20px;
     width: 80%;
-    max-width: 150px;
+    max-width: 110px;
 
     background-color: #036fe2;
     color: white;
@@ -597,9 +611,11 @@ footer a {
     color: white;
   }
 
-  .services-grid {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 600px;
+    .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+     margin: 0 auto;
   }
 
   .services-section {
@@ -632,7 +648,7 @@ footer a {
     padding-bottom: 20px;
     height: 330px;
     width: 300px;
-    margin-left: 13%;
+     
   }
 
   .carousel {
@@ -828,7 +844,7 @@ footer a {
     grid-template-columns: 1fr;
     gap: 20px;
     margin: 0 auto;
-    margin-left: 2%;
+     
   }
 
   .service-card {

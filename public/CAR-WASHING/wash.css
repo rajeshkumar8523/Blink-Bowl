@@ -372,9 +372,10 @@ footer a {
     flex-direction: column;
     position: absolute;
     top: 79px;
-    left: 42%;
+    left: 41%;
     width: 60%;
-    background-color: #036fe2;
+    background-color: #75a7dd;
+    border-radius: 0 0 20px 20px;
     padding: 5px 5px 25px 2px;
     /* Increased bottom padding */
     z-index: 1001;
@@ -390,8 +391,8 @@ footer a {
     font-size: 14px;
     padding: 12px 20px;
     width: 80%;
-    max-width: 150px;
-    background-color: #036fe2;
+    max-width: 110px;
+     background-color: #036fe2;
     color: white;
     text-decoration: none;
     border-radius: 12px;
@@ -457,30 +458,27 @@ footer a {
     font-family: Arial, sans-serif;
   }
 
-  .carousel {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-left: 60px;
-    display: flex;
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    background: rgba(255, 255, 255, 0.1);
-    /* Light background for glass effect */
-    backdrop-filter: blur(10px);
-    /* Glass blur */
-    -webkit-backdrop-filter: blur(10px);
-    /* Safari support */
-    border: 2px solid #007BFF;
-    /* Blue border */
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-    /* Blue glow shadow */
-  }
+ .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;     /* Center content vertically */
+  
+  /* Glassmorphism styles */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
+  border-radius: 15px;
+  border: 2px solid #007BFF;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  
+  padding: 0 16px; /* Optional: inner padding */
+}
 
 
   .apply-btn {

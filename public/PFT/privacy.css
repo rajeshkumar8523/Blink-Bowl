@@ -238,10 +238,11 @@ footer a {
     top: 79px;
     left: 42%;
     width: 60%;
-    background-color: #036fe2;
+    background-color: #75a7dd;
     padding: 5px 5px 25px 2px;
     /* Increased bottom padding */
     z-index: 1001;
+    border-radius: 0 0 20px 20px;
     align-items: center;
     gap: 4px;
   }
@@ -249,6 +250,9 @@ footer a {
   .nav-links.show {
     display: flex;
   }
+nav.nav-links a {
+  text-decoration: none !important;
+}
 
   .nav-links a {
     font-size: 14px;
@@ -263,6 +267,7 @@ footer a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
   }
+
 
   /* Hover effect */
   .nav-links a:hover {
