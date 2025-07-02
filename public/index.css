@@ -542,8 +542,7 @@ nav a:hover {
   max-width: 550px;
   margin: 0 auto 40px;
   line-height: 1.6;
-  text-align: left;
-  margin-left: 10px;
+   text-align: center;
 }
 
 .essitinal-grid {

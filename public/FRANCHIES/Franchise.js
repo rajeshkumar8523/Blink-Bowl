@@ -1,5 +1,5 @@
 window.onload = function () {
-  emailjs.init("Sv_27Wcdv4sOr2Zx9"); // ✅ Your actual EmailJS public key
+  emailjs.init("bbTCIGiaKx5c6q8ju"); // ✅ Your actual EmailJS public key
   document.getElementById("franchiseForm").addEventListener("submit", handleFranchiseSubmit);
 };
 

@@ -225,6 +225,29 @@ textarea:focus {
   color: #007BFF;
 }
 
+.success-message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.success-icon {
+  font-size: 50px;
+  color: green;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 
 .contact-container {
   text-align: center;
@@ -499,18 +522,23 @@ footer a {
     margin-right: auto;
     max-width: 300px;
   }
-
+.contact-section {
+margin-top: 0%;
+margin: 0 auto;
+}
   .contact-container {
     text-align: center;
-    padding: 25px 10px;
-    margin-left: 2%;
+    padding: 0 12px;
+    margin: 0 auto;
 
   }
 
   .contact-container h2 {
     font-size: 20px;
     color: #1b1e33;
-    margin-left: 7%;
+    margin: 0 auto;
+     margin-left: 7%;
+     margin-bottom: 15px;
   }
 
   .contact-container h2 span {
@@ -518,17 +546,18 @@ footer a {
   }
 
   .desc {
-    margin-top: 10px;
+    margin-top: 15px;
     color: #666;
     font-size: 14px;
     line-height: 1.5;
+    margin: 0 auto;
     margin-left: 7%;
   }
 
   .contact-boxes {
-    margin: 40px auto;
+    margin: 0 auto;
     display: grid;
-    margin-left: 8%;
+    
     grid-template-columns: repeat(2, 1fr);
     /* Force exactly 2 per row */
     gap: 20px;

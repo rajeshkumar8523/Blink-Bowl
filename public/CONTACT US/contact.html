@@ -7,6 +7,9 @@
   <title>Car Washing Services - Blink Bowl</title>
   <link rel="stylesheet" href="contact .css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -52,16 +55,24 @@
   <section class="contact-section">
     <div class="form-card">
       <h3>Leave your message</h3>
-      <form>
+      <form id="contactForm">
         <div class="form-row">
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
         </div>
-        <input type="text" placeholder="Subject" required />
-        <textarea rows="5" placeholder="Message"></textarea>
+        <input type="text" id="subject" name="subject" placeholder="Subject" required />
+        <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
 
         <button type="submit" class="btn-primary">Send Message</button>
+
+        <!-- Success Message -->
+<div id="successMessage" style="display: none;" class="success-message">
+  <i class="fas fa-check-circle success-icon"></i>
+  <p>Message sent successfully!</p>
+</div>
+
       </form>
+
     </div>
 
     <div class="contact-info">
@@ -133,42 +144,9 @@
 
   <footer>
     <p>&copy; 2025 Blink Bowl. All Rights Reserved.</p>
-    <p>Powered by <a href="https://www.vspazetechnologies.in/"
-        target="_blank">vspaze technologies</a></p>
+    <p>Powered by <a href="https://www.vspazetechnologies.in/" target="_blank">vspaze technologies</a></p>
   </footer>
-  <script>
-    const menu = document.getElementById("mobileMenu");
-const toggleBtn = document.getElementById("menuToggle");
-
-function toggleMenu() {
-  menu.classList.toggle("show");
-
-  if (menu.classList.contains("show")) {
-    toggleBtn.textContent = "✖";
-    document.addEventListener("click", handleOutsideClick);
-  } else {
-    toggleBtn.textContent = "☰";
-    document.removeEventListener("click", handleOutsideClick);
-  }
-}
-
-function handleOutsideClick(event) {
-  if (!menu.contains(event.target) && !toggleBtn.contains(event.target)) {
-    menu.classList.remove("show");
-    toggleBtn.textContent = "☰";
-    document.removeEventListener("click", handleOutsideClick);
-  }
-}
-
-
-// Optional: Reset on resize
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 768) {
-    menu.classList.remove("show");
-    toggleBtn.textContent = "☰";
-  }
-});
-  </script>
+  <script src="contact.js"></script>
 </body>
 
 </html>
