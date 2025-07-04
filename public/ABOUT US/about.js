@@ -1,3 +1,5 @@
+//// NAV MENUBAR ////
+
 const menu = document.getElementById("mobileMenu");
 const toggleBtn = document.getElementById("menuToggle");
 
@@ -29,3 +31,39 @@ window.addEventListener("resize", () => {
     toggleBtn.textContent = "☰";
   }
 });
+
+
+
+
+
+//// SCROLL BAR ////
+
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show/hide button on scroll
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 100) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
+
+// Scroll to top smoothly when button clicked
+scrollTopBtn.addEventListener("click", () => {
+  slowScrollToTop();
+});
+
+function slowScrollToTop() {
+  const scrollSpeed = 3; // Lower = slower
+
+  function scrollStep() {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 0) {
+      window.scrollTo(0, currentScroll - scrollSpeed);
+      requestAnimationFrame(scrollStep);
+    }
+  }
+
+  requestAnimationFrame(scrollStep);
+}
